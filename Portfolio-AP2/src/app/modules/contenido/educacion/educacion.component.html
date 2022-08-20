@@ -1,0 +1,9 @@
+<section class="educacion" id="educacion">
+    <h2> Educacion </h2>
+    <ul>
+            <li *ngFor="let item of menu_edu">
+                <div class="logo_edu"><img [src]="item.url_logo" alt=""></div>
+                <div><h3>{{item.titulo}}</h3><h4>{{item.inicio}} - {{item.fin}} {{item.lugar}}</h4></div>
+            </li>
+    </ul>
+</section>

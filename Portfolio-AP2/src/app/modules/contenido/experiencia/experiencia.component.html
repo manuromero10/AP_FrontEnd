@@ -1,0 +1,9 @@
+<section class="experiencia" id="experiencia">
+    <h2> Experiencia </h2>
+    <ul>
+        <li *ngFor="let item of menu_exp"> 
+            <div class="logo_exp"> <img [src]="item.url_logo" alt=""></div>
+            <div> <h3> {{item.puesto}}  </h3> <h4>  {{item.inicio}} - {{item.fin}}  {{item.nombre_emp_lugar}} </h4></div>
+        </li>
+    </ul>
+</section>

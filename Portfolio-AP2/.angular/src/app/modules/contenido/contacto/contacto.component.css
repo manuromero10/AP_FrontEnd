@@ -1,0 +1,51 @@
+/* contacto */
+
+.contacto {
+    background-color: rgba(0, 0, 0, 0.2);
+    min-height: calc(100vh - 80px);
+}
+.contenedor_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor_form h2 {
+    font-size: 35px;
+    margin: 10px;
+    padding-bottom: 10px;
+    color: rgb(72, 71, 71);
+}
+.contenedor_form h3 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: rgb(72, 71, 71);
+}
+.contenedor_form h4 {
+    padding: 10px;
+    color: rgb(72, 71, 71);
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.formulario input, textarea  {
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    border: 0;
+}
+.formulario > textarea {
+    max-width: 100%;
+    max-height: 160px;
+}
+.formulario > div {
+    padding: 0;
+}
+.envia_form {
+    padding: 15px 40px;
+}
+.envia_form:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+}

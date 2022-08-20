@@ -1,0 +1,44 @@
+
+ /* experiencia, educacion, proyectos */
+ .experiencia {
+    padding: 40px;
+    min-height: calc(100vh - 80px);
+    background-color: olivedrab;
+    
+ }
+
+ .experiencia h2, .educacion h2, .proyectos h2 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+ }
+ .experiencia ul, .educacion ul, .proyectos ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px 0px;
+    place-items: center;
+    background-color: aliceblue;
+ }
+
+ .experiencia li, .educacion li, .proyectos li {
+    position: relative;
+    padding: 30px;
+    min-height: 160px;
+    background-color: beige;
+}
+ 
+ .experiencia .logo_exp img, .educacion .logo_edu img {
+    height: 30px;
+ }
+ 
+
+ @media screen and (max-width: 800px) {
+    .experiencia ul, .educacion ul, .proyectos ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+     }
+
+ }

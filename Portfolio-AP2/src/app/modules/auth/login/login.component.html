@@ -1,0 +1,18 @@
+<div class="contenedor_form">
+    <form [formGroup]="loginForm" (submit)="sendCredentials()" name="Login"  class="formulario">
+        <h1>Login</h1>
+        <div class="contenedor">
+            <div class="input-cont">
+                <i class="fa-solid fa-user icon"></i>
+                <input formControlName="nombreUsuario" type="text" placeholder="Nombre de Usuario">
+            </div>
+            <div class="input-cont">
+                <i class="fa-solid fa-key icon"></i>
+                <input formControlName="password" type="password" placeholder="Contraseña">
+            </div>
+            <button [disabled]="loginForm.invalid" class="button">Iniciar sesion</button>
+            <!-- <input type="submit" value="Iniciar sesion" class="button"> -->
+
+        </div> 
+    </form>
+</div>

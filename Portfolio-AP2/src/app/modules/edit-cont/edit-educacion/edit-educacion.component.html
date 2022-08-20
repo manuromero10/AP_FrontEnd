@@ -1,0 +1,87 @@
+<div class="educacion" id="educacion">
+    <h2> Educacion </h2>
+    
+    <div>
+        <button type="button" (click)="agregarBoton()" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">
+        <fa-icon [icon]="faPlusEdu"></fa-icon>
+        </button>
+        <ul>
+            <li *ngFor="let item of menu_edu">
+              <button (click)="eliminarBoton(item)" class="btn pl-3 " data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+                <fa-icon [icon]="faTrash"></fa-icon>
+              </button>
+              <button (click)="editarBoton(item)" class="btn pl-3 pr-3 mx-2" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+                <fa-icon [icon]="faPen"></fa-icon>
+              </button>
+              <div class="logo_edu"><img [src]="item.url_logo" alt=""></div>
+              <div>
+                <h3>{{item.titulo}}</h3><h4>{{item.inicio}} - {{item.fin}} {{item.lugar}}</h4>
+              </div>
+            </li>
+        </ul>
+
+    </div>
+    
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-primary" *ngIf="showTituloAgregar" >Agregar</h5>
+        <h5 class="modal-title text-primary" *ngIf="showTituloEditar" >Actualizar</h5>
+        <h5 class="modal-title text-primary" *ngIf="showEliminar">Atención</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      </div>
+      <div class="modal-body" *ngIf=" showAgregar || showEditar">
+        <form [formGroup]="formValueEdu">
+
+          <input type="hidden" name="id" formControlName="id">
+          <div>
+            <label for="titulo" class="form-label">Titulo</label>
+            <input type="text" class="form-control" id="titulo" formControlName="titulo">
+          </div>
+          <div>
+            <label for="inicio" class="form-label">Fecha de Ingreso </label>
+            <input type="text" class="form-control" id="inicio" formControlName="inicio">
+          </div>
+          <div>
+            <label for="fin" class="form-label"> Fecha de Egreso </label>
+            <input type="text" class="form-control" id="fin" formControlName="fin">
+          </div>
+          <div>
+            <label for="lugar" class="form-label"> Institucion </label>
+            <input type="text" class="form-control" id="lugar" formControlName="lugar">
+          </div>
+          <div>
+            <label for="url_logo" class="form-label"> URL_LOGO </label>
+            <input type="text" class="form-control" id="url_logo" formControlName="url_logo">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-body" *ngIf="showEliminar">
+        ¿Esta seguro que desea eliminar el elemento seleccionado?
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" *ngIf="showAgregar" class="btn btn-primary"  (click)="agregarEdu()">Guardar</button>
+        <button type="submit" *ngIf="showEditar" class="btn btn-primary" (click)="editarEdu()">Guardar</button>
+        <button type="submit" *ngIf="showEliminar" class="btn btn-primary" data-bs-dismiss="modal" (click)="eliminarEdu()">Eliminar</button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+  
+
+</div>
