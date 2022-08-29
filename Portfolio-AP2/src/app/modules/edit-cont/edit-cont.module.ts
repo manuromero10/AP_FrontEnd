@@ -6,10 +6,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { EditContRoutingModule } from './edit-cont-routing.module';
 import { EditAcercadeComponent } from './edit-acercade/edit-acercade.component';
-import { EditHomeComponent } from './pages/edit-home/edit-home.component';
 import { EditEducacionComponent } from './edit-educacion/edit-educacion.component';
 import { EditExperienciaComponent } from './edit-experiencia/edit-experiencia.component';
 import { EditProyectosComponent } from './edit-proyectos/edit-proyectos.component';
+import { EditHomeComponent } from './pages/edit-home/edit-home.component';
+import { EditHabilidadesComponent } from './edit-habilidades/edit-habilidades.component';
 
 
 
@@ -20,7 +21,8 @@ import { EditProyectosComponent } from './edit-proyectos/edit-proyectos.componen
     EditHomeComponent,
     EditEducacionComponent,
     EditExperienciaComponent,
-    EditProyectosComponent
+    EditProyectosComponent,
+    EditHabilidadesComponent
   ],
   imports: [
     CommonModule,

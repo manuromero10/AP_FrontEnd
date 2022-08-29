@@ -1,20 +1,68 @@
-<section class="acercade" id="acercade">
-    <div class="perfil"> 
-        <div class="btn-edit" onclick="">
-            <i class="fa-solid fa-pen"></i>
+<section class="acercade-content" id="acercade" *ngFor="let item of persona"> 
+    <button (click)="editarBoton(item)" class="btn pl-3 pr-3 mx-2" data-bs-toggle="modal" data-bs-target="#acercadeModal">
+        <fa-icon [icon]="faPen"></fa-icon>
+    </button>
+    <div class="acercade">
+        <div class="perfil">
+            <img [src]="item.url_foto" alt="">
         </div>
-        <img src="images/perfil1.jpg" alt="">
-        <input type="file" accept="image/png, image/gif, image/jpeg">
-        <input type="button" value="Cargar foto" id="btn_subir_fotoperfil" onclick="edit_foto()">
-    </div>
-    <div class="texto">
-        <div class="btn-edit" onclick="cambiar_parrafo()">
-                <i class="fa-solid fa-pen"></i>
+        <div class="texto"> 
+            <h2> {{item.nombre}} {{item.apellido}} </h2> 
+            <h2> {{item.ocupacion}} </h2>
+            <h3> {{item.sobre_mi}} </h3>
         </div>
-        <h1 id="text-acercade">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, commodi? Alias placeat deleniti officiis, tenetur vitae fugiat. Hic iure ab deserunt ullam, corrupti exercitationem enim at dolor debitis minima cumque.</h1>
-        <div>
-            <input id="edit-acercade" type="text" placeholder="Acerca de" oninput="myFunction2(this.value)" style="display:none">
-        </div>
-        <!-- <input type="file" id="file1" onchange="showFile(this)"> -->
     </div>
 </section>
+
+    <div class="modal fade" id="acercadeModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-primary" >Actualizar datos</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+                <form [formGroup]="formValuePer">
+                    <input type="hidden" name="id" formControlName="id">
+                    <div>
+                        <label for="nombre" class="form-label">nombre</label>
+                        <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                    </div>
+                    <div>
+                        <label for="apellido" class="form-label">apellido</label>
+                        <input type="text" class="form-control" id="apellido" formControlName="apellido">
+                    </div>
+                    <div>
+                        <label for="fechaNac" class="form-label"> Fecha de Nac </label>
+                        <input type="text" class="form-control" id="fechaNac" formControlName="fechaNac">
+                    </div>
+                    <div>
+                        <label for="email" class="form-label"> email </label>
+                        <input type="text" class="form-control" id="email" formControlName="email">
+                    </div>
+                    <div>
+                        <label for="ocupacion" class="form-label"> ocupacion </label>
+                        <input type="text" class="form-control" id="ocupacion" formControlName="ocupacion">
+                    </div>
+                    <div>
+                        <label for="sobre_mi" class="form-label"> sobre_mi </label>
+                        <textarea type="text" class="form-control" formControlName="sobre_mi" id="sobre_mi" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="url_foto" class="form-label"> url_foto </label>
+                        <input type="text" class="form-control" id="url_foto" formControlName="url_foto">
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary" (click)="editarAcercade()">Guardar</button>
+            </div>   
+          </div>
+        </div>
+      </div>

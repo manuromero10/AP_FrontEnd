@@ -26,14 +26,17 @@ body {
 }
 input[type="text"], input[type="password"] {
     font-size: 20px;
-    width: 82%;
     padding: 10px;
     border: none;
+    width: 100%;
 }
 
 .input-cont {
     margin-bottom: 15px;
     border: 1px solid #aaa;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 .icon {
     min-width: 50px;
@@ -60,7 +63,8 @@ input[type="text"], input[type="password"] {
 }
 
 input.ng-invalid.ng-touched {
-    border: solid 1px red;
+    border: solid 1px rgba(208, 26, 26, 0.743);
+    box-shadow: 4px 4px 4px rgba(255, 0, 0, 0.399);
 
 }
 

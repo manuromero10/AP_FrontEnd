@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
         nombreUsuario: new FormControl('',[Validators.required]),
         password: new FormControl('',[Validators.required,
         Validators.minLength(6),
-      Validators.maxLength(12)])
+      Validators.maxLength(20)])
       }
     )
   }
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     const body = this.loginForm.value;
     this.authService.submitLogin(body)
     .subscribe((response) => {
-      this.router.navigate(['/admin/edit'])
+      this.router.navigate(['/admin'])
     })
     console.log(body)
   }

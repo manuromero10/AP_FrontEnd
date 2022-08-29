@@ -1,16 +1,19 @@
 /* acercade */
 
-.acercade {
+.acercade-content {
     width: 100%;
     max-width: 100vw;
     min-height: 100vh;
     background-image: url(../../../../assets/images/fondo.jpg);
     background-attachment: fixed;
+    padding: 85px 50px 0 50px;
+    
+}
+.acercade {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    align-items: center;
-    padding: 85px 50px 0 50px;
+    align-items: center; 
 }
 
 .perfil img {

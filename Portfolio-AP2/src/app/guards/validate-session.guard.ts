@@ -12,7 +12,6 @@ import { Observable } from 'rxjs';
 export class ValidateSessionGuard implements CanActivate {
 
   private cookie:string | null = this.cookieService.get('token_session')!;
-  // this.cookieService.get('token_session')
 
   constructor(private router:Router, private cookieService: CookieService){
 
@@ -31,17 +30,6 @@ export class ValidateSessionGuard implements CanActivate {
       return false;
     }
     return true;
-
-  /* 
-  private checkCookie():boolean{
-    const token = this.cookieService.check('token_session')
-    if (!token) {
-      this.router.navigate(['/','auth','login'])
-      return false;
-    }
-    return true;
-  }
-  */
 
     // if(this.cookie !== null){
     //  return true;

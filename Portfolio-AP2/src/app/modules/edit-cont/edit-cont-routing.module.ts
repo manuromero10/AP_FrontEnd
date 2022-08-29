@@ -4,7 +4,7 @@ import { EditHomeComponent } from './pages/edit-home/edit-home.component';
 
 const routes: Routes = [
   {
-    path:'edit',
+    path:'',
     component:EditHomeComponent
   }
 ];

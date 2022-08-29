@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from '@shared/services/auth.service';
-import { CookieService } from 'ngx-cookie-service';
+
 
 @Component({
   selector: 'app-header',
@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   usuario: boolean = false;
 
 
-  constructor(private router:Router, private authService: AuthService, private cookieService: CookieService) {
+  constructor(private router:Router, private authService: AuthService) {
 
    }
 
@@ -23,30 +23,30 @@ export class HeaderComponent implements OnInit {
     this.isLogged();
   }
 
-  menu: Array<{name:string, router:any}> = [
+  menu: Array<{name:string, id: string}> = [
     {
       name: 'Experiencia',
-      router: '/experiencia'
+      id: "experiencia"
     },
     {
       name: 'Educacion',
-      router: []
+      id: "educacion"
     },
 
     {
       name: 'Habilidades',
-      router: []
+      id: "habilidades"
     },
 
     {
       name: 'Proyectos',
-      router: []
-    },
-
-    {
-      name: 'Contacto',
-      router: []
+      id: "proyectos"
     }
+
+    //{
+    //  name: 'Contacto',
+    //  router: []
+    // }
 
 
   ]
@@ -62,19 +62,18 @@ export class HeaderComponent implements OnInit {
       }
     }
   } 
-
+/*
   isLogged() {
     const cookieExists: boolean = this.cookieService.check('token_session');
     // console.log(cookieExists);
-    this.usuario = cookieExists;
+    this.usuario = this.cookieExists;
   }
+*/
 
-    /*
   isLogged(): void {
-
-    this.authService.checkCookie();  
+   this.authService.checkCookie();
+   this.usuario = this.authService.admin 
   }
-  */
 
 
   cerrarSesion(): void {

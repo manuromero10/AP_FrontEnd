@@ -11,7 +11,7 @@ export class AuthService {
 
   private URL = environment.api;
 
-  // usuario: boolean = false;
+  admin: boolean = false;
 
 
   constructor( private httpClient:HttpClient, private cookieService:CookieService) { }
@@ -40,12 +40,10 @@ export class AuthService {
     this.cookieService.delete('token_session');
     console.log('elimino cookie');
   }
-/*
+
   checkCookie() {
     const cookieExists: boolean = this.cookieService.check('token_session');
     console.log(cookieExists);
-    this.usuario = cookieExists;
+    this.admin = cookieExists;
   }
- */ 
-
 }

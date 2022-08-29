@@ -56,13 +56,6 @@ export class EditEducacionComponent implements OnInit {
   });
   }
 
-//  eliminarEdu(item: any) {
-  //  this.eduadminService.deleteEducacion(item.id).subscribe((a) =>
-    //{alert('Se eliminó con exito');
-      //this.getAllEducacion;
-  //  });
-
- // }
 
  agregarBoton() {
   this.formValueEdu.reset();
