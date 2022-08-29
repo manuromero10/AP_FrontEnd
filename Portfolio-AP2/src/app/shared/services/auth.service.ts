@@ -27,7 +27,6 @@ export class AuthService {
           path:'/'
           });
           this.cookieService.get('token_session');
-          console.log(stream)
         }),
         catchError(() => {
           console.log('Algo ocurrio!!')
@@ -38,12 +37,10 @@ export class AuthService {
 
   logOut() {
     this.cookieService.delete('token_session');
-    console.log('elimino cookie');
   }
 
   checkCookie() {
     const cookieExists: boolean = this.cookieService.check('token_session');
-    console.log(cookieExists);
     this.admin = cookieExists;
   }
 }

@@ -25,7 +25,6 @@ export class ExpAdminService {
   }
 
   deleteExperiencia(id: number) {
-    console.log('elimino', id)
     return this.HttpClient.delete(
       `${this.URL}/experiencia/delete/`+id);
   }

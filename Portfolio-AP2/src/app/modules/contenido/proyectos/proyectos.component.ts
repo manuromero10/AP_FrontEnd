@@ -17,8 +17,6 @@ export class ProyectosComponent implements OnInit {
     .subscribe((response) => {
 
       this.menu_proy = response;
-
-      console.log('--->',response)
     })
   }
 

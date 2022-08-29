@@ -41,8 +41,6 @@ export class EditAcercadeComponent implements OnInit {
     .subscribe((response) => {
 
       this.persona = response;
-      
-      console.log('--->',response)
     })
   }
 
@@ -58,8 +56,6 @@ export class EditAcercadeComponent implements OnInit {
       this.formValuePer.controls['ocupacion'].setValue(item.ocupacion);
       this.formValuePer.controls['sobre_mi'].setValue(item.sobre_mi);
       this.formValuePer.controls['url_foto'].setValue(item.url_foto);
-      console.log(this.formValuePer)
-
   }
 
   editarAcercade() {
@@ -78,7 +74,6 @@ export class EditAcercadeComponent implements OnInit {
         this.formValuePer.reset();
         this.getAllPersona();
       });
-    console.log(this.formValuePer.value)
 
   }
 

@@ -34,12 +34,7 @@ import { HomeComponent } from './pages/home/home.component';
   ],
   exports: [
     HeaderComponent,
-    AcercaDeComponent,
-    ExperienciaComponent,
-    EducacionComponent,
     HabilidadesComponent,
-    ProyectosComponent,
-    ContactoComponent,
     FooterComponent
 
   ]

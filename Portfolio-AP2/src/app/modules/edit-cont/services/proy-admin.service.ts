@@ -25,7 +25,6 @@ export class ProyAdminService {
   }
 
   deleteProyecto(id: number) {
-    console.log('elimino', id)
     return this.HttpClient.delete(
       `${this.URL}/proyecto/delete/`+id);
   }

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { HomeComponent } from './pages/home/home.component';
 
 

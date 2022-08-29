@@ -17,10 +17,7 @@ export class AcercaDeComponent implements OnInit {
   ngOnInit(): void {
     this.personaService.getPersona()
     .subscribe((response) => {
-
       this.persona = response;
-      
-      console.log('--->',response)
     })
   }
 

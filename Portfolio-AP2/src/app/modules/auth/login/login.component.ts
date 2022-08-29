@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
     .subscribe((response) => {
       this.router.navigate(['/admin'])
     })
-    console.log(body)
   }
   
 

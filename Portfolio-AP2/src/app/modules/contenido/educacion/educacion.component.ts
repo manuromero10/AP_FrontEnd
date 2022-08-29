@@ -19,8 +19,6 @@ export class EducacionComponent implements OnInit {
     .subscribe((response) => {
 
       this.menu_edu = response;
-
-      console.log('--->',response)
     })
   }
 

@@ -54,8 +54,6 @@ export class EditProyectosComponent implements OnInit {
     .subscribe((response) => {
 
       this.menu_proy = response;
-
-      console.log('--->',response)
     });
   }
 
@@ -72,7 +70,6 @@ export class EditProyectosComponent implements OnInit {
   }
   
   agregarProy(): any {
-    console.log(this.formValueProy.value);
     this.proyectoObj = this.formValueProy.value;
   
     let cancel = document.getElementById('cancel');
@@ -101,7 +98,6 @@ export class EditProyectosComponent implements OnInit {
     this.formValueProy.controls['descripcion'].setValue(item.descripcion);
     this.formValueProy.controls['url_imagen'].setValue(item.url_imagen);
     this.formValueProy.controls['url_proyecto'].setValue(item.url_proyecto);
-    console.log(this.formValueProy)
     
 }
 
@@ -121,7 +117,6 @@ editarProy() {
       this.formValueProy.reset();
       this.getAllProyecto();
     });
-  console.log(this.formValueProy.value)
 }
 
 eliminarBoton(item:any) {
@@ -142,7 +137,5 @@ eliminarProy() {
   });
 
 }
-
-
 
 }

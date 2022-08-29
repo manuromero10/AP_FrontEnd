@@ -17,8 +17,6 @@ export class ExperienciaComponent implements OnInit {
     .subscribe((response) => {
 
       this.menu_exp = response;
-
-      console.log('--->',response)
     })
   }
 }

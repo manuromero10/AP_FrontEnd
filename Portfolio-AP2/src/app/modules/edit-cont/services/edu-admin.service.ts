@@ -10,8 +10,6 @@ import { catchError, Observable, of } from 'rxjs';
 })
 export class EduAdminService {
 
-  // educacionEmitter = new EventEmitter();
-
   private URL = environment.api;
 
   constructor(private HttpClient:HttpClient) { }
@@ -29,7 +27,6 @@ export class EduAdminService {
 
   
   deleteEducacion(id: number) {
-    console.log('elimino', id)
     return this.HttpClient.delete(
       `${this.URL}/educacion/delete/`+id);
   }

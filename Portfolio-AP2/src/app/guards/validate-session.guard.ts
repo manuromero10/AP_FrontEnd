@@ -24,7 +24,6 @@ export class ValidateSessionGuard implements CanActivate {
   }
 
   private checkCookie():boolean{
-    console.log('OK', this.cookie)
     if(!this.cookie){
       this.router.navigate(['/','auth','login'])
       return false;

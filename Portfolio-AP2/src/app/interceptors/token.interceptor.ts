@@ -17,8 +17,6 @@ export class TokenInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
     const token = this.cookieService.get('token_session');
-    console.log(token)
-    console.log('interceptando');
     const currentRequest = request.clone(
       {
         setHeaders: {

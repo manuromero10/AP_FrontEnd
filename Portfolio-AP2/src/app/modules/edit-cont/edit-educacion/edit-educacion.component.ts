@@ -52,7 +52,6 @@ export class EditEducacionComponent implements OnInit {
     this.eduadminService.getEducacion()
   .subscribe((response) => {
     this.menu_edu = response;
-    console.log('--->',response)
   });
   }
 
@@ -99,7 +98,6 @@ agregarEdu(): any {
       this.formValueEdu.controls['fin'].setValue(item.fin);
       this.formValueEdu.controls['lugar'].setValue(item.lugar);
       this.formValueEdu.controls['url_logo'].setValue(item.url_logo);
-      console.log(this.formValueEdu)
       
   }
 
@@ -119,7 +117,6 @@ agregarEdu(): any {
         this.formValueEdu.reset();
         this.getAllEducacion();
       });
-    console.log(this.formValueEdu.value)
   }
 
   eliminarBoton(item:any) {

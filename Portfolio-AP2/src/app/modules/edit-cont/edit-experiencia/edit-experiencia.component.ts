@@ -51,7 +51,6 @@ export class EditExperienciaComponent implements OnInit {
     this.expadminService.getExperiencia()
   .subscribe((response) => {
     this.menu_exp = response;
-    console.log('--->',response)
   });
   }
 
@@ -96,7 +95,6 @@ export class EditExperienciaComponent implements OnInit {
       this.formValueExp.controls['fin'].setValue(item.fin);
       this.formValueExp.controls['nombre_emp_lugar'].setValue(item.nombre_emp_lugar);
       this.formValueExp.controls['url_logo'].setValue(item.url_logo);
-      console.log(this.formValueExp)
       
   }
 
@@ -116,7 +114,6 @@ export class EditExperienciaComponent implements OnInit {
         this.formValueExp.reset();
         this.getAllExperiencia();
       });
-    console.log(this.formValueExp.value)
   }
 
   eliminarBoton(item:any) {

@@ -81,7 +81,7 @@ export class HeaderComponent implements OnInit {
     this.authService.logOut();
     this.usuario = false;
     this.router.navigate(['/home']);
-    console.log('cerrar sesion');  }
+   }
 
   
 }
