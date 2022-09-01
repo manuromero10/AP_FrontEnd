@@ -1,73 +1,20 @@
- <section class="habilidades" id="habilidades">
-    <div class="titulo-skill">
-        <h2> Mis <span>  Habilidades </span></h2>
-        <p> Aqui estan mis hablidades</p>
-    </div>   
-    <div class="cont-skill">
-         <div class="skill-bar">
-            <div class="info">
-                <p>HTML</p>
-                <p class="porcent">90%</p>
-            </div>
-            <div class="bar">
-                <span class="html"></span>
-            </div>
-         </div>
-         <div class="skill-bar">
-            <div class="info">
-                <p>CSS</p>
-                <P class="porcent">85%</P>
-            </div>
-            <div class="bar">
-                <span class="css"></span>
-            </div>
-         </div>
-    
-    
-        <div class="skill-bar">
-             <div class="info">
-                <p>Java Script</p>
-                <P class="porcent">80%</P>
-             </div>
-             <div class="bar">
-                <span class="js"></span>
-             </div>
-         </div>
-
- 
-         <div class="skill-bar">
-              <div class="info">
-                 <p>React JS</p>
-                 <P class="porcent">70%</P>
-              </div>
-              <div class="bar">
-                 <span class="react"></span>
-              </div>
-          </div>
-
-      
-         <div class="skill-bar">
-              <div class="info">
-                 <p>Node JS</p>
-                 <P class="porcent">70%</P>
-              </div>
-              <div class="bar">
-                 <span class="node"></span>
-              </div>
-          </div>
-      
-         <div class="skill-bar">
-              <div class="info">
-                 <p>Mongo DB</p>
-                 <P class="porcent">65%</P>
-              </div>
-              <div class="bar">
-                 <span class="mongo"></span>
-              </div>
-          </div>
-    </div>
-    
-        
-    
-    
+<section class="habilidades" id="habilidades">
+   <div class="titulo-skill">
+       <h2> Mis <span>  Habilidades </span></h2>
+       <p> Aqui estan mis hablidades</p>
+   </div>
+   <div class="cont-skill">
+       <div *ngFor="let item of menu_hab">
+           <div class="skill-bar">
+               <div class="info">
+                   <p>{{item.nombre}}</p>
+                   <p class="porcent">{{item.porcentaje}}</p>
+               </div>
+               
+               <div class="progress">
+                   <div class="progress-bar bg-success" style="width:40%" [style.width]="item.porcentaje"></div>                                                                    
+               </div>
+           </div>
+       </div>
+   </div>
 </section>

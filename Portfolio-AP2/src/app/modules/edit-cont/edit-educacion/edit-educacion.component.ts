@@ -77,7 +77,7 @@ agregarEdu(): any {
   {alert('Se agregó con exito');
     cancel?.click();
     this.formValueEdu.reset();
-    this.getAllEducacion;
+    this.getAllEducacion();
   }
   )
   
@@ -133,7 +133,7 @@ agregarEdu(): any {
   eliminarEdu() {
     this.eduadminService.deleteEducacion(this.iddelete).subscribe((a) =>
     {alert('Se eliminó con exito');
-      this.getAllEducacion;
+      this.getAllEducacion();
     });
 
   }

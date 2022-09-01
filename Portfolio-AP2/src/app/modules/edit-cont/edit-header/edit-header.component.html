@@ -1,0 +1,14 @@
+<header class="header">
+    <nav class="navbar1">
+        <div class="logo"> <a routerLink="/"><img src="../../../../assets/images/logoap2.png" alt=""></a></div>
+        <ul class="nav_items">
+            <li class="nlink" *ngFor="let item of menu"><a routerLink="/admin" fragment={{item.id}} (click)="closeMenu()" > {{item.name}}</a></li>
+        </ul>
+        <div class="cont_btn">
+            <span class="btn_logout">
+                <a (click)="cerrarSesion()">CERRAR SESION</a>
+            </span>
+            <fa-icon  [icon]="faBars" (click)="showMenu()"></fa-icon>
+        </div>
+    </nav>   
+</header>

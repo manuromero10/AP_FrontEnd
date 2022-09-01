@@ -1,60 +1,91 @@
 /* experiencia, educacion, proyectos */
-.educacion {
+ .educacion {
+    position: relative;
     padding: 40px;
     min-height: calc(100vh - 80px);
     background-color: rgb(140, 174, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url(../../../../assets/images/fazul.jpg);
  }
 
- .experiencia h2, .educacion h2, .proyectos h2 {
-    font-size: 30px;
+ .educacion h2 {
+    font-size: 40px;
+    color: beige;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
  }
- .experiencia ul, .educacion ul, .proyectos ul {
+ .btn-add {
+   position: absolute;
+   right: 4%;
+   top: 68px;
+   padding: 6px 12px;
+   border: 1px solid white;
+   border-radius: 5px;
+   color: white;
+   background-color: rgba(240, 248, 255, 0.372);
+
+
+}
+.btn-add:hover {
+   transform: scale(1.2,1.2);
+}
+ .educacion ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 50px 0px;
+    padding: 50px 15px;
     place-items: center;
-    background-color: aliceblue;
  }
 
- .experiencia li, .educacion li, .proyectos li {
-    position: relative;
-    padding: 30px;
-    min-height: 160px;
-    background-color: beige;
+ .educacion li  {
+   position: relative;
+   padding: 10px 20px 20px 20px;
+   min-height: 160px;
+   width: 80%;
+   border: 3px solid white;
+   border-radius: 10px;
+   background-color: rgba(240, 248, 255, 0.568);
+}
+
+.btn-container {
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   margin-bottom: 10px;
+}
+
+.btn-edit, .btn-delete {
+   color: black;
+   border: 1px solid white;
+   border-radius: 50%;
+}
+.btn-delete {
+   margin-right: 0;
+}
+.btn-edit:hover, .btn-delete:hover {
+   transform: scale(1.2,1.2);
+   color: beige;
 }
  
- .experiencia .logo_exp img, .educacion .logo_edu img {
+.logo_edu img {
     height: 30px;
- }
+    margin-bottom: 15px;
+}
  
+.texto {
+   color: rgb(6, 6, 52);
+}
+
+.texto h4 {
+    font-size: 22px; 
+}
 
  @media screen and (max-width: 800px) {
-    .experiencia ul, .educacion ul, .proyectos ul {
-        display: grid;
+    .educacion ul{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 30px;
      }
-
  }
-
- .btn-edit-delete {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-}
-.edit, .delete {
-    background: grey;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 15px;
-    margin: 2px;
-    padding: 8px; 
-}
-.delete {
-    padding: 8px 10.5px;
-}

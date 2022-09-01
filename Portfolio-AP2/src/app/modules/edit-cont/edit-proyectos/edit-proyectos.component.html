@@ -1,25 +1,29 @@
 <section class="proyectos" id="proyectos">
     <h2> Proyectos</h2>
     <div>
-        <button type="button" (click)="agregarBoton()" data-bs-toggle="modal"
+        <button type="button" class="btn-add" (click)="agregarBoton()" data-bs-toggle="modal"
                   data-bs-target="#proyModal">
         <fa-icon [icon]="faPlusEdu"></fa-icon>
         </button>
         <ul>
             <li *ngFor="let item of menu_proy">
-                <button (click)="eliminarBoton(item)" class="btn pl-3 " data-bs-toggle="modal"
-                   data-bs-target="#proyModal">
-                   <fa-icon [icon]="faTrash"></fa-icon>
+              <div class="btn-container">
+                <button (click)="editarBoton(item)" class="btn pl-3 pr-3 mx-2 btn-edit" data-bs-toggle="modal"
+                        data-bs-target="#proyModal">
+                       <fa-icon [icon]="faPen"></fa-icon>
                 </button>
-                <button (click)="editarBoton(item)" class="btn pl-3 pr-3 mx-2" data-bs-toggle="modal"
-                    data-bs-target="#proyModal">
-                   <fa-icon [icon]="faPen"></fa-icon>
+                <button (click)="eliminarBoton(item)" class="btn pl-3 btn-delete " data-bs-toggle="modal"
+                       data-bs-target="#proyModal">
+                      <fa-icon [icon]="faTrash"></fa-icon>
                 </button>
-                <div> 
-                    <h3> {{item.nombre}}  </h3> <h4>  {{item.fecha}} - {{item.descripcion}} <a href=""></a> </h4>
-                </div>
-                <div><img [src]="item.url_imagen" alt=""></div>
-                <div><h4> Link al proyecto: {{item.url_proyecto}}</h4></div> 
+              </div>
+              <div class="texto"> 
+                    <h3> {{item.nombre}}  </h3>
+                    <h4>  {{item.fecha}}</h4>
+                    <h4> {{item.descripcion}} </h4>
+                    <div><img [src]="item.url_imagen" alt=""></div>
+                    <h4> Link al proyecto: <a [href]='item.url_proyecto'> Aqui</a></h4>
+              </div>
             </li>
         </ul>
     </div>
@@ -71,8 +75,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" *ngIf="showAgregar" class="btn btn-primary"  (click)="agregarProy()">Guardar</button>
-          <button type="submit" *ngIf="showEditar" class="btn btn-primary" (click)="editarProy()">Guardar</button>
+          <button type="submit" *ngIf="showAgregar" class="btn btn-primary" data-bs-dismiss="modal" (click)="agregarProy()">Guardar</button>
+          <button type="submit" *ngIf="showEditar" class="btn btn-primary" data-bs-dismiss="modal" (click)="editarProy()">Guardar</button>
           <button type="submit" *ngIf="showEliminar" class="btn btn-primary" data-bs-dismiss="modal" (click)="eliminarProy()">Eliminar</button>
   
         </div>

@@ -1,0 +1,86 @@
+.habilidades {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    min-height: calc(100vh - 80px);
+    padding: 80px 13%;
+    background-color: rgb(244, 226, 186);
+}
+
+.titulo-skill {
+    width: 100%;
+    margin-bottom: 70px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.titulo-skill h2 {
+    margin-bottom: -5px;
+    font-weight: bold;
+    font-size: 35px;
+}
+.titulo-skill h2 span {
+    color: green;
+}
+.cont-skill {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px ;
+}
+
+.cont-skill .skill-bar .info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.skill-bar .info .porcent {
+    font-weight: bold;
+
+}
+
+.btn-add {
+    position: absolute;
+    right: 4%;
+    top: 68px;
+    padding: 6px 12px;
+    border: 1px solid rgb(7, 78, 7);
+    border-radius: 5px;
+    background-color: rgba(255, 228, 196, 0.39);
+    
+ 
+ }
+ .btn-add:hover {
+    transform: scale(1.2,1.2);
+    color: rgb(7, 78, 7) ;
+ }
+
+ .btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+ }
+
+ .btn-edit, .btn-delete {
+    color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+ }
+ .btn-delete {
+    margin-right: 0;
+ }
+ .btn-edit:hover, .btn-delete:hover {
+    transform: scale(1.2,1.2);
+ }
+
+
+  /* media skills*/
+@media screen and (max-width: 650px) {
+    .cont-skill {
+        grid-template-columns: 1fr;
+    }
+
+}

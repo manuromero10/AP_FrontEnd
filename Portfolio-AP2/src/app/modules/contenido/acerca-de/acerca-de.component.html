@@ -1,4 +1,8 @@
 <section class="acercade" id="acercade" *ngFor="let item of persona">
     <div class="perfil"><img [src]="item.url_foto" alt=""></div>
-    <div class="texto"> <h1  > {{item.nombre}} {{item.apellido}} {{item.ocupacion}} {{item.sobre_mi}}</h1></div>
+    <div class="texto">
+        <h1> {{item.nombre}} {{item.apellido}} </h1>
+        <h2> {{item.ocupacion}}</h2>
+        <h3> {{item.sobre_mi}} </h3>
+    </div>
 </section>

@@ -2,23 +2,28 @@
     <h2> Educacion </h2>
     
     <div>
-        <button type="button" (click)="agregarBoton()" data-bs-toggle="modal"
+        <button type="button" class="btn-add" (click)="agregarBoton()" data-bs-toggle="modal"
                   data-bs-target="#eduModal">
         <fa-icon [icon]="faPlusEdu"></fa-icon>
         </button>
         <ul>
             <li *ngFor="let item of menu_edu">
-              <button (click)="eliminarBoton(item)" class="btn pl-3 " data-bs-toggle="modal"
-              data-bs-target="#eduModal">
-                <fa-icon [icon]="faTrash"></fa-icon>
-              </button>
-              <button (click)="editarBoton(item)" class="btn pl-3 pr-3 mx-2" data-bs-toggle="modal"
-              data-bs-target="#eduModal">
-                <fa-icon [icon]="faPen"></fa-icon>
-              </button>
-              <div class="logo_edu"><img [src]="item.url_logo" alt=""></div>
-              <div>
-                <h3>{{item.titulo}}</h3><h4>{{item.inicio}} - {{item.fin}} {{item.lugar}}</h4>
+              <div class="btn-container">
+                <button (click)="editarBoton(item)" class="btn pl-3 pr-3 mx-2 btn-edit" data-bs-toggle="modal"
+                        data-bs-target="#eduModal">
+                       <fa-icon [icon]="faPen"></fa-icon>
+                </button>
+                <button (click)="eliminarBoton(item)" class="btn pl-3 btn-delete " data-bs-toggle="modal"
+                       data-bs-target="#eduModal">
+                      <fa-icon [icon]="faTrash"></fa-icon>
+                </button>
+              </div>
+              <div class="logo_edu"><img [src]="item.url_logo" alt="">
+              </div>
+              <div class="texto">
+                <h3>{{item.titulo}}</h3>
+                <h4>{{item.inicio}} - {{item.fin}} </h4>
+                <h4>{{item.lugar}}</h4> 
               </div>
             </li>
         </ul>
@@ -72,8 +77,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="submit" *ngIf="showAgregar" class="btn btn-primary"  (click)="agregarEdu()">Guardar</button>
-        <button type="submit" *ngIf="showEditar" class="btn btn-primary" (click)="editarEdu()">Guardar</button>
+        <button type="submit" *ngIf="showAgregar" class="btn btn-primary" data-bs-dismiss="modal" (click)="agregarEdu()">Guardar</button>
+        <button type="submit" *ngIf="showEditar" class="btn btn-primary" data-bs-dismiss="modal" (click)="editarEdu()">Guardar</button>
         <button type="submit" *ngIf="showEliminar" class="btn btn-primary" data-bs-dismiss="modal" (click)="eliminarEdu()">Eliminar</button>
 
       </div>

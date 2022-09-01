@@ -20,10 +20,14 @@ export class HeaderComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.isLogged();
+   // this.isLogged();
   }
 
   menu: Array<{name:string, id: string}> = [
+    {
+      name: 'Home',
+      id: "acercade"
+    },
     {
       name: 'Experiencia',
       id: "experiencia"
@@ -42,46 +46,28 @@ export class HeaderComponent implements OnInit {
       name: 'Proyectos',
       id: "proyectos"
     }
-
-    //{
-    //  name: 'Contacto',
-    //  router: []
-    // }
-
-
   ]
- 
   showMenu(){
-    let dropMenu = document.querySelector('.nav_items')
-    if(dropMenu){
-      if(dropMenu.classList.contains('show')){
-        dropMenu.classList.remove('show')
-      }
-      else{
-        dropMenu.className+=' show'
-      }
+    let nav_items = document.querySelector('.nav_items')
+    if (nav_items) {
+      nav_items.classList.toggle('show')
     }
-  } 
-/*
-  isLogged() {
-    const cookieExists: boolean = this.cookieService.check('token_session');
-    // console.log(cookieExists);
-    this.usuario = this.cookieExists;
   }
-*/
+  closeMenu(){
+    let nav_items = document.querySelector('.nav_items')
+    if (nav_items) {
+      nav_items.classList.remove('show')
+    } 
+  }
+  
 
+/*
   isLogged(): void {
    this.authService.checkCookie();
    this.usuario = this.authService.admin 
   }
+  */
 
-
-  cerrarSesion(): void {
-
-    this.authService.logOut();
-    this.usuario = false;
-    this.router.navigate(['/home']);
-   }
 
   
 }

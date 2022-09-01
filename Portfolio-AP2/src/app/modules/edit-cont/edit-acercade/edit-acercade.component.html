@@ -1,14 +1,14 @@
 <section class="acercade-content" id="acercade" *ngFor="let item of persona"> 
-    <button (click)="editarBoton(item)" class="btn pl-3 pr-3 mx-2" data-bs-toggle="modal" data-bs-target="#acercadeModal">
+    <button (click)="editarBoton(item)" class="btn pl-3 pr-3 mx-2 btn-edit" data-bs-toggle="modal" data-bs-target="#acercadeModal">
         <fa-icon [icon]="faPen"></fa-icon>
     </button>
     <div class="acercade">
         <div class="perfil">
             <img [src]="item.url_foto" alt="">
         </div>
-        <div class="texto"> 
-            <h2> {{item.nombre}} {{item.apellido}} </h2> 
-            <h2> {{item.ocupacion}} </h2>
+        <div class="texto">
+            <h1> {{item.nombre}} {{item.apellido}} </h1>
+            <h2> {{item.ocupacion}}</h2>
             <h3> {{item.sobre_mi}} </h3>
         </div>
     </div>
@@ -28,31 +28,31 @@
                 <form [formGroup]="formValuePer">
                     <input type="hidden" name="id" formControlName="id">
                     <div>
-                        <label for="nombre" class="form-label">nombre</label>
+                        <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="nombre" formControlName="nombre">
                     </div>
                     <div>
-                        <label for="apellido" class="form-label">apellido</label>
+                        <label for="apellido" class="form-label">Apellido</label>
                         <input type="text" class="form-control" id="apellido" formControlName="apellido">
                     </div>
                     <div>
-                        <label for="fechaNac" class="form-label"> Fecha de Nac </label>
+                        <label for="fechaNac" class="form-label"> Fecha de Nacimiento </label>
                         <input type="text" class="form-control" id="fechaNac" formControlName="fechaNac">
                     </div>
                     <div>
-                        <label for="email" class="form-label"> email </label>
+                        <label for="email" class="form-label"> E-mail </label>
                         <input type="text" class="form-control" id="email" formControlName="email">
                     </div>
                     <div>
-                        <label for="ocupacion" class="form-label"> ocupacion </label>
+                        <label for="ocupacion" class="form-label"> Ocupacion </label>
                         <input type="text" class="form-control" id="ocupacion" formControlName="ocupacion">
                     </div>
                     <div>
-                        <label for="sobre_mi" class="form-label"> sobre_mi </label>
-                        <textarea type="text" class="form-control" formControlName="sobre_mi" id="sobre_mi" cols="30" rows="10"></textarea>
+                        <label for="sobre_mi" class="form-label"> Sobre mi </label>
+                        <textarea type="text" class="form-control" formControlName="sobre_mi" id="sobre_mi" cols="30" rows="6"></textarea>
                     </div>
                     <div>
-                        <label for="url_foto" class="form-label"> url_foto </label>
+                        <label for="url_foto" class="form-label"> URL - Foto de perfil </label>
                         <input type="text" class="form-control" id="url_foto" formControlName="url_foto">
                     </div>
                 </form>
@@ -61,7 +61,7 @@
 
             <div class="modal-footer">
               <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button type="submit" class="btn btn-primary" (click)="editarAcercade()">Guardar</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="editarAcercade()">Guardar</button>
             </div>   
           </div>
         </div>

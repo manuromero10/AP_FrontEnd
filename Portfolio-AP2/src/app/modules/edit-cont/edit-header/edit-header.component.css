@@ -1,0 +1,136 @@
+.header {
+    width: 100%;
+    max-width: 100vw;
+    position: fixed;
+    z-index: 2;
+}
+.logo img {
+    height: 85px;
+}
+
+.navbar1 {
+    background-color: rgb(17, 104, 101);
+    background-color: rgb(13, 75, 73); 
+    height: 85px;
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 5px 0 10px rga (0, 0, 0, .6);
+
+}
+
+.nav_items {
+    display: flex;
+    z-index: 2;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nlink {
+    border-radius: 3px;
+    margin: 0 5px;
+    padding: 7px 10px;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: black;
+}
+
+.nlink:hover {
+    background-color: rgba(0, 255, 123, 0.3);
+    transition: .4s;
+}
+
+fa-icon {
+    margin: 0 20px 0 10px  ;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.cont_btn {
+    display: flex;
+}
+
+ul.show {
+    top:80px;
+}
+
+.btn_logout {
+    background-color: rgba(28, 143, 107, 0.621);
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 3px;
+    border: 1px solid ;
+    border-color: rgb(243, 229, 205);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.btn_logout a {
+    color: rgb(243, 229, 205);
+}
+
+/* media header */
+ @media screen and (max-width: 970px) {
+    .navbar1 {
+        padding: 0 10px;
+    }
+    .nlink {
+        padding: 5px ;
+    }
+    a {
+        font-size: 16px;
+    }
+    .logo img {
+        height: 75px;
+    }
+ }
+
+ @media screen and (max-width: 850px) {
+
+    fa-icon {
+        display: inline-flex;
+    }
+    .nav_items {
+        position: absolute;
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+        background-color: bisque;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+        margin-right: 0;
+        left: 0;
+        height: calc(100vh - 80px);
+    }
+    .nlink {
+        margin: 15px 0;
+        line-height: 40px; 
+    }
+    .nlink:hover {
+        background: none;
+    }
+
+    .nlink a {
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(17, 104, 101);
+    }
+    .nlink a:hover {
+        color: rgb(37, 208, 145);
+    }
+    .btn_logout {
+        font-size: 14px;
+    }
+
+ }

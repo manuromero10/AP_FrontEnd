@@ -19,8 +19,7 @@ export class EditExperienciaComponent implements OnInit {
 
   public formValueExp!: FormGroup;
 
-  faPlusEdu = faPlus;
-  faCheckEdu = faCheck;
+  faPlus = faPlus;
   faPen = faPen;
   faTrash = faTrash;
 
@@ -75,7 +74,7 @@ export class EditExperienciaComponent implements OnInit {
     {alert('Se agregó con exito');
       cancel?.click();
       this.formValueExp.reset();
-      this.getAllExperiencia;
+      this.getAllExperiencia();
     }
     )
   }
@@ -131,7 +130,7 @@ export class EditExperienciaComponent implements OnInit {
   eliminarExp() {
     this.expadminService.deleteExperiencia(this.iddelete).subscribe((a) =>
     {alert('Se eliminó con exito');
-      this.getAllExperiencia;
+      this.getAllExperiencia();
     });
 
   }

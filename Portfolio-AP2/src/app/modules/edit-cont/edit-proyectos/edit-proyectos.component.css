@@ -1,18 +1,36 @@
 /* experiencia, educacion, proyectos */
-.experiencia, .educacion, .proyectos {
+.proyectos {
+   position: relative;
     padding: 40px;
     min-height: calc(100vh - 80px);
     background-color: rgb(140, 174, 238);
  }
 
- .experiencia h2, .educacion h2, .proyectos h2 {
+ .proyectos h2 {
     font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: yellow;
  }
- .experiencia ul, .educacion ul, .proyectos ul {
+
+ .btn-add {
+   position: absolute;
+   right: 4%;
+   top: 68px;
+   padding: 6px 12px;
+   border: 1px solid rgb(7, 78, 7);
+   border-radius: 5px;
+   background-color: rgba(255, 228, 196, 0.39);
+   
+
+}
+.btn-add:hover {
+   transform: scale(1.2,1.2);
+   color: rgb(7, 78, 7) ;
+}
+
+ .proyectos ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 50px 0px;
@@ -20,41 +38,30 @@
     background-color: aliceblue;
  }
 
- .experiencia li, .educacion li, .proyectos li {
+ .proyectos li {
     position: relative;
     padding: 30px;
     min-height: 160px;
     background-color: beige;
 }
  
- .experiencia .logo_exp img, .educacion .logo_edu img {
-    height: 30px;
- }
- 
+.btn-edit, .btn-delete {
+   color: black;
+   border: 1px solid beige;
+   border-radius: 50%;
+}
+.btn-delete {
+   margin-right: 0;
+}
+.btn-edit:hover, .btn-delete:hover {
+   transform: scale(1.2,1.2);
+   color: beige;
+}
 
  @media screen and (max-width: 800px) {
-    .experiencia ul, .educacion ul, .proyectos ul {
+    .proyectos ul {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
      }
 
  }
-
- .btn-edit-delete {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-}
-.edit, .delete {
-    background: grey;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 15px;
-    margin: 2px;
-    padding: 8px; 
-}
-.delete {
-    padding: 8px 10.5px;
-}

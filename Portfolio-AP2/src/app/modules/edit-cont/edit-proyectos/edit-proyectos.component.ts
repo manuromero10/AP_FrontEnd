@@ -77,7 +77,7 @@ export class EditProyectosComponent implements OnInit {
     {alert('Se agregó con exito');
       cancel?.click();
       this.formValueProy.reset();
-      this.getAllProyecto;
+      this.getAllProyecto();
     }
     )  
   }
@@ -133,7 +133,7 @@ eliminarBoton(item:any) {
 eliminarProy() {
   this.proyadminService.deleteProyecto(this.iddelete).subscribe((a) =>
   {alert('Se eliminó con exito');
-    this.getAllProyecto;
+    this.getAllProyecto();
   });
 
 }

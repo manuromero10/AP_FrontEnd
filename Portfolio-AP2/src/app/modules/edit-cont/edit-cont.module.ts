@@ -11,6 +11,7 @@ import { EditExperienciaComponent } from './edit-experiencia/edit-experiencia.co
 import { EditProyectosComponent } from './edit-proyectos/edit-proyectos.component';
 import { EditHomeComponent } from './pages/edit-home/edit-home.component';
 import { EditHabilidadesComponent } from './edit-habilidades/edit-habilidades.component';
+import { EditHeaderComponent } from './edit-header/edit-header.component';
 
 
 
@@ -22,7 +23,8 @@ import { EditHabilidadesComponent } from './edit-habilidades/edit-habilidades.co
     EditEducacionComponent,
     EditExperienciaComponent,
     EditProyectosComponent,
-    EditHabilidadesComponent
+    EditHabilidadesComponent,
+    EditHeaderComponent
   ],
   imports: [
     CommonModule,

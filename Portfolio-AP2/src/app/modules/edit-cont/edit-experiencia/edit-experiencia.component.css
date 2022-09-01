@@ -1,61 +1,88 @@
-/* experiencia, educacion, proyectos */
+/* experiencia */
 .experiencia {
-    padding: 40px;
-    min-height: calc(100vh - 80px);
-    background-color: olivedrab;
-    
- }
-
- .experiencia h2, .educacion h2, .proyectos h2 {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: yellow;
- }
- .experiencia ul, .educacion ul, .proyectos ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 50px 0px;
-    place-items: center;
-    background-color: aliceblue;
- }
-
- .experiencia li, .educacion li, .proyectos li {
-    position: relative;
-    padding: 30px;
-    min-height: 160px;
-    background-color: beige;
+   position: relative;
+   padding: 40px;
+   min-height: calc(100vh - 80px);
+   background-image: url(../../../../assets/images/fbeige.jpg);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around; 
 }
- 
- .experiencia .logo_exp img, .educacion .logo_edu img {
-    height: 30px;
- }
- 
 
- @media screen and (max-width: 800px) {
-    .experiencia ul, .educacion ul, .proyectos ul {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-     }
-
- }
-
- .btn-edit-delete {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
+.experiencia h2 {
+   font-size: 40px;
+   margin: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: bold;
+   color: rgb(7, 78, 7);
 }
-.edit, .delete {
-    background: grey;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 15px;
-    margin: 2px;
-    padding: 8px; 
+.btn-add {
+   position: absolute;
+   right: 4%;
+   top: 68px;
+   padding: 6px 12px;
+   border: 1px solid rgb(7, 78, 7);
+   border-radius: 5px;
+   background-color: rgba(255, 228, 196, 0.39);
+   
+
 }
-.delete {
-    padding: 8px 10.5px;
+.btn-add:hover {
+   transform: scale(1.2,1.2);
+   color: rgb(7, 78, 7) ;
+}
+
+.experiencia ul {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   padding: 50px 0px;
+   place-items: center;
+   background-image: url(../../../../assets/images/fverde2.jpg);
+   border-radius: 5px;
+}
+
+.experiencia li {
+   padding: 10px 20px 20px 20px;
+   min-height: 160px;
+   border-radius: 10px;
+   border: solid 3px;
+   border-color: beige;
+   background-color: rgba(245, 245, 220, 0.53);
+   width: 80%;
+}
+
+.btn-container {
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   margin-bottom: 10px;
+}
+
+.btn-edit, .btn-delete {
+   color: black;
+   border: 1px solid beige;
+   border-radius: 50%;
+}
+.btn-delete {
+   margin-right: 0;
+}
+.btn-edit:hover, .btn-delete:hover {
+   transform: scale(1.2,1.2);
+   color: beige;
+}
+
+.logo_exp img {
+   height: 30px;
+   margin-bottom: 15px;
+}
+
+
+@media screen and (max-width: 800px) {
+   .experiencia ul  {
+       grid-template-columns: 1fr;
+       grid-gap: 30px;
+    }
+
 }

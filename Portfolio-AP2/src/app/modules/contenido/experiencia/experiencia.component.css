@@ -1,44 +1,57 @@
 
- /* experiencia, educacion, proyectos */
+ /* experiencia */
  .experiencia {
     padding: 40px;
     min-height: calc(100vh - 80px);
-    background-color: olivedrab;
-    
+    background-image: url(../../../../assets/images/fbeige.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
  }
 
- .experiencia h2, .educacion h2, .proyectos h2 {
-    font-size: 30px;
+ .experiencia h2 {
+    font-size: 40px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
+    font-weight: bold;
+    color: rgb(7, 78, 7);
  }
- .experiencia ul, .educacion ul, .proyectos ul {
+ .experiencia ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 50px 0px;
+    padding: 50px 15px;
     place-items: center;
-    background-color: aliceblue;
+    background-image: url(../../../../assets/images/fverde2.jpg);
+    border-radius: 5px;
  }
 
- .experiencia li, .educacion li, .proyectos li {
+ .experiencia li {
     position: relative;
-    padding: 30px;
+    padding: 20px;
     min-height: 160px;
-    background-color: beige;
+    border-radius: 10px;
+    border: solid 3px;
+    border-color: beige;
+    background-color: rgba(245, 245, 220, 0.53);
+    width: 80%;
 }
  
- .experiencia .logo_exp img, .educacion .logo_edu img {
+ .logo_exp img {
     height: 30px;
+    margin-bottom: 15px;
+ }
+
+ .experiencia .texto h4 {
+   font-size: 22px;
  }
  
 
  @media screen and (max-width: 800px) {
-    .experiencia ul, .educacion ul, .proyectos ul {
-        display: grid;
+    .experiencia ul {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 30px;
      }
 
  }

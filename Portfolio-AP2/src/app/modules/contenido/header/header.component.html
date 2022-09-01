@@ -1,18 +1,14 @@
 <header class="header">
     <nav class="navbar1">
-        <div class="logo"> <a routerLink="/"><img src="../../../../assets/images/logoap2.png" alt=""></a></div>
+        <div class="logo"> <a routerLink="/"><img src="../../../../assets/images/logoap2.png" alt=""></a>
+        </div>
         <ul class="nav_items">
-            <li class="nlink" *ngFor="let item of menu"><a routerLink="/home" fragment={{item.id}}> {{item.name}}</a></li>
+            <li class="nlink" *ngFor="let item of menu"><a routerLink="/home" fragment={{item.id}} (click)="closeMenu()"> {{item.name}}</a></li>
         </ul>
         <div class="cont_btn">
-            <span class="btn_logout">
-                <a *ngIf="usuario ; else tplNoUsuario" (click)="cerrarSesion()">CERRAR SESION</a>
+            <span class="btn_login">
+                <a [routerLink]="['/','admin']">ADMINISTRAR</a>
             </span>
-            <ng-template #tplNoUsuario>
-                <span class="btn_login">
-                    <a [routerLink]="['/','auth','login']">LOGIN</a>
-                </span>   
-            </ng-template>
             <fa-icon  [icon]="faBars" (click)="showMenu()"></fa-icon>
         </div>
     </nav>   

@@ -1,12 +1,11 @@
-/* HABILIDADES */
-
 .habilidades {
-
+    position: relative;
     width: 100%;
     max-width: 100vw;
     min-height: calc(100vh - 80px);
     padding: 80px 13%;
-    background-color:rgba(0, 0, 0, 0.08) ;
+    background-color: rgb(244, 226, 186);
+    background-color: white;
 }
 
 .titulo-skill {
@@ -18,9 +17,11 @@
 }
 .titulo-skill h2 {
     margin-bottom: -5px;
+    font-weight: bold;
+    font-size: 35px;
 }
 .titulo-skill h2 span {
-    color: orange;
+    color: green;
 }
 .cont-skill {
     width: 100%;
@@ -29,7 +30,9 @@
     grid-column-gap: 50px;
     grid-row-gap: 20px ;
 }
+
 .cont-skill .skill-bar .info {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
@@ -37,99 +40,6 @@
 .skill-bar .info .porcent {
     font-weight: bold;
 
-}
-.skill-bar .bar {
-    width: 100%;
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    position: relative;
-    border-radius: 25px;
-    margin-top: 5px;
-}
-.skill-bar .bar span {
-    width:50% ;
-    height: 100%;
-    position: absolute;
-    background-color: #e74d06;
-    border-radius: 25px;
-}
-.skill-bar .bar .html {
-    width: 90%;
-    animation: html 3s;
-}
-
-@keyframes html {
-    0% {
-        width:0;
-    }100%{
-        width:90%;
-    }
-    
-}
-.skill-bar .bar .css {
-    width: 85%;
-    animation: css 3s;
-}
-
-@keyframes css {
-    0% {
-        width:0;
-    }100%{
-        width:85%;
-    }
-    
-}
-.skill-bar .bar .js {
-    width: 80%;
-    animation: js 3s;
-}
-
-@keyframes js {
-    0% {
-        width:0;
-    }100%{
-        width:80%;
-    }
-    
-}
-.skill-bar .bar .react {
-    width: 70%;
-    animation: react 3s;
-}
-
-@keyframes react {
-    0% {
-        width:0;
-    }100%{
-        width:70%;
-    }
-    
-}
-.skill-bar .bar .node {
-    width: 70%;
-    animation: node 3s;
-}
-
-@keyframes node {
-    0% {
-        width:0;
-    }100%{
-        width:70%;
-    }
-    
-}
-.skill-bar .bar .mongo {
-    width: 65%;
-    animation: mongo 3s;
-}
-
-@keyframes mongo {
-    0% {
-        width:0;
-    }100%{
-        width:65%;
-    }
-    
 }
 
  /* media skills*/
