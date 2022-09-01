@@ -45,6 +45,10 @@
     padding-right: 8px;
 }
 
+.box i {
+    text-transform: lowercase;
+}
+
 
 
 /* Media footer */

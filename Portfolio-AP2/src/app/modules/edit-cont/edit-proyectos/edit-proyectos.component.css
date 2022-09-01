@@ -1,17 +1,20 @@
-/* experiencia, educacion, proyectos */
+/* proyectos */
 .proyectos {
    position: relative;
     padding: 40px;
     min-height: calc(100vh - 80px);
-    background-color: rgb(140, 174, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    background-image: url(../../../../assets/images/fazul3.jpg);
  }
 
  .proyectos h2 {
-    font-size: 30px;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
+    color: white;
  }
 
  .btn-add {
@@ -19,15 +22,15 @@
    right: 4%;
    top: 68px;
    padding: 6px 12px;
-   border: 1px solid rgb(7, 78, 7);
+   border: 1px solid white;
    border-radius: 5px;
-   background-color: rgba(255, 228, 196, 0.39);
-   
+   color: white;
+   background-color: rgba(240, 248, 255, 0.372);
+
 
 }
 .btn-add:hover {
    transform: scale(1.2,1.2);
-   color: rgb(7, 78, 7) ;
 }
 
  .proyectos ul {
@@ -35,14 +38,18 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 50px 0px;
     place-items: center;
-    background-color: aliceblue;
+    background-color: rgba(162, 208, 245, 0.372);
+    border-radius: 5px;
  }
 
  .proyectos li {
     position: relative;
     padding: 30px;
     min-height: 160px;
-    background-color: beige;
+    width: 80%;
+   border: 3px solid white;
+   border-radius: 10px;
+   background-color: rgba(240, 248, 255, 0.568);
 }
  
 .btn-edit, .btn-delete {
@@ -57,11 +64,18 @@
    transform: scale(1.2,1.2);
    color: beige;
 }
+.logo {
+   height: 30px;
+}
+
+.texto h4 {
+  font-size: 22px;
+}
 
  @media screen and (max-width: 800px) {
     .proyectos ul {
-        display: grid;
         grid-template-columns: 1fr;
+        grid-gap: 30px;
      }
 
  }

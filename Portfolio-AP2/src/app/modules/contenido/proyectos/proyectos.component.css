@@ -1,43 +1,53 @@
 
- /* experiencia, educacion, proyectos */
- .experiencia, .educacion, .proyectos {
+ /* proyectos */
+   .proyectos {
     padding: 40px;
     min-height: calc(100vh - 80px);
-    background-color: rgb(140, 174, 238);
- }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    background-image: url(../../../../assets/images/fazul3.jpg);
+   }
 
- .experiencia h2, .educacion h2, .proyectos h2 {
-    font-size: 30px;
+  .proyectos h2 {
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
+    color: white;
  }
- .experiencia ul, .educacion ul, .proyectos ul {
+  .proyectos ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 50px 0px;
+    padding: 50px 15px;
     place-items: center;
-    background-color: aliceblue;
- }
+    background-color: rgba(162, 208, 245, 0.372);
+    border-radius: 5px;
+}
 
- .experiencia li, .educacion li, .proyectos li {
+ .proyectos li {
     position: relative;
-    padding: 30px;
+    padding: 20px;
     min-height: 160px;
-    background-color: beige;
+    width: 80%;
+    border-radius: 10px;
+    border: solid 3px white;
+   background-color: rgba(240, 248, 255, 0.568);
 }
  
- .experiencia .logo_exp img, .educacion .logo_edu img {
+ .logo {
     height: 30px;
+ }
+
+.texto h4 {
+   font-size: 22px;
  }
  
 
  @media screen and (max-width: 800px) {
-    .experiencia ul, .educacion ul, .proyectos ul {
-        display: grid;
+    .proyectos ul {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 30px;
      }
 
  }
